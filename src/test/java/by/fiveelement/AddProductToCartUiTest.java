@@ -1,9 +1,23 @@
 package by.fiveelement;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-public class AddProductToCartUiTest extends BaseTest {
+import java.time.Duration;
+
+public class AddProductToCartUiTest {
+    WebDriver webDriver = new ChromeDriver();
+    @BeforeEach
+    public void setUp() {
+        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        webDriver.get("https://5element.by/");
+        webDriver.manage().window().maximize();
+    }
+
     @Test
     public void addProductToCartTest() {
         CartPage cartPage = new CartPage(webDriver);
@@ -14,5 +28,10 @@ public class AddProductToCartUiTest extends BaseTest {
                 .clickButtonAddToCart();
 
         Assertions.assertTrue(cartPage.getTextAboutSmartphone().contains(CartPageMessage.TEXT_ADD_TO_CART));
+    }
+
+    @AfterEach
+    public void tearDown() {
+        webDriver.quit();
     }
 }
