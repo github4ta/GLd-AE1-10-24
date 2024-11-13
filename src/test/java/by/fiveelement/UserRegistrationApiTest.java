@@ -39,9 +39,9 @@ public class UserRegistrationApiTest {
         given()
                 .body(body)
                 .headers("Content-Type", "application/json")
-                .when()
+        .when()
                 .post(url)
-                .then()
+        .then()
                 .log().all()
                 .statusCode(200)
                 .body("errors.fields.name", equalTo("Укажите имя"))
@@ -60,13 +60,14 @@ public class UserRegistrationApiTest {
         given()
                 .body(body)
                 .headers("Content-Type", "application/json")
-                .when()
+        .when()
                 .post(url)
-                .then()
+        .then()
                 .log().all()
                 .statusCode(200)
                 .body("errors.fields.name", equalTo("Укажите имя"));
     }
+
     @Test
     @DisplayName("Регистрация с именем в 101 символ")
     public void testRegistrationWithANameOf101Characters() {
@@ -80,9 +81,9 @@ public class UserRegistrationApiTest {
         given()
                 .body(body)
                 .headers("Content-Type", "application/json")
-                .when()
+        .when()
                 .post(url)
-                .then()
+        .then()
                 .log().all()
                 .statusCode(200)
                 .body("errors.fields.name", equalTo("Допустимое количество символов 100"));
