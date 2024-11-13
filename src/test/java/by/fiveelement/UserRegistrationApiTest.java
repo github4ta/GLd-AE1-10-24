@@ -67,4 +67,24 @@ public class UserRegistrationApiTest {
                 .statusCode(200)
                 .body("errors.fields.name", equalTo("Укажите имя"));
     }
+    @Test
+    @DisplayName("Регистрация с именем в 101 символ")
+    public void testRegistrationWithANameOf101Characters() {
+        String name = "testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttestw";
+        String body = "{\n" +
+                "   \"name\": \"" + name + "\",\n" +
+                "   \"mobile\": \"+375290000000\",\n" +
+                "   \"type\": \"reg_code\"\n" +
+                "}";
+        String url = "https://5element.by/user/registration";
+        given()
+                .body(body)
+                .headers("Content-Type", "application/json")
+                .when()
+                .post(url)
+                .then()
+                .log().all()
+                .statusCode(200)
+                .body("errors.fields.name", equalTo("Допустимое количество символов 100"));
+    }
 }
