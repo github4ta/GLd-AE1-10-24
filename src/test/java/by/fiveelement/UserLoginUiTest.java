@@ -37,7 +37,7 @@ public class UserLoginUiTest {
         webDriver.findElement(loginFieldLocator).sendKeys("test@test.com");
         webDriver.findElement(passwordFieldLocator).sendKeys("123456");
         webDriver.findElement(enterButtonLocator).click();
-        Assertions.assertEquals("Пользователь не найден",webDriver.findElement(errorMessageLocator).getText());
+        Assertions.assertEquals("Пользователь не найден", webDriver.findElement(errorMessageLocator).getText());
     }
 
     @Test
@@ -46,8 +46,18 @@ public class UserLoginUiTest {
         webDriver.findElement(loginFieldLocator).sendKeys("+375290000000");
         webDriver.findElement(passwordFieldLocator).sendKeys("123456");
         webDriver.findElement(enterButtonLocator).click();
-        Assertions.assertEquals("Неверный пароль",webDriver.findElement(errorMessageLocator).getText());
+        Assertions.assertEquals("Неверный пароль", webDriver.findElement(errorMessageLocator).getText());
     }
+
+    @Test
+    @Description("Incorrect input")
+    public void incorrectInputTest() {
+        webDriver.findElement(loginFieldLocator).sendKeys("123123123");
+        webDriver.findElement(passwordFieldLocator).sendKeys("123456");
+        webDriver.findElement(enterButtonLocator).click();
+        Assertions.assertEquals("Некорректный ввод", webDriver.findElement(errorMessageLocator).getText());
+    }
+
 
     @AfterTest
     public void tearDown() {
