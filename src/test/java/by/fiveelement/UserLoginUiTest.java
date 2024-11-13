@@ -1,13 +1,13 @@
 package by.fiveelement;
 
 import jdk.jfr.Description;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
 
 import java.time.Duration;
 
@@ -34,32 +34,40 @@ public class UserLoginUiTest {
     @Test
     @Description("Unregistered email")
     public void unregisteredEmailTest() {
-        webDriver.findElement(loginFieldLocator).sendKeys("test@test.com");
-        webDriver.findElement(passwordFieldLocator).sendKeys("123456");
+        String emailOrPhone = "test@test.com";
+        String password = "123456";
+        String expectedMessage = "Пользователь не найден";
+        webDriver.findElement(loginFieldLocator).sendKeys(emailOrPhone);
+        webDriver.findElement(passwordFieldLocator).sendKeys(password);
         webDriver.findElement(enterButtonLocator).click();
-        Assertions.assertEquals("Пользователь не найден", webDriver.findElement(errorMessageLocator).getText());
+        Assertions.assertEquals(expectedMessage, webDriver.findElement(errorMessageLocator).getText());
     }
 
     @Test
     @Description("Wrong password")
     public void wrongPasswordTest() {
-        webDriver.findElement(loginFieldLocator).sendKeys("+375290000000");
-        webDriver.findElement(passwordFieldLocator).sendKeys("123456");
+        String emailOrPhone = "+375290000000";
+        String password = "123456";
+        String expectedMessage = "Неверный пароль";
+        webDriver.findElement(loginFieldLocator).sendKeys(emailOrPhone);
+        webDriver.findElement(passwordFieldLocator).sendKeys(password);
         webDriver.findElement(enterButtonLocator).click();
-        Assertions.assertEquals("Неверный пароль", webDriver.findElement(errorMessageLocator).getText());
+        Assertions.assertEquals(expectedMessage, webDriver.findElement(errorMessageLocator).getText());
     }
 
     @Test
     @Description("Incorrect input")
     public void incorrectInputTest() {
-        webDriver.findElement(loginFieldLocator).sendKeys("123123123");
-        webDriver.findElement(passwordFieldLocator).sendKeys("123456");
+        String emailOrPhone = "123123123";
+        String password = "123456";
+        String expectedMessage = "Некорректный ввод";
+        webDriver.findElement(loginFieldLocator).sendKeys(emailOrPhone);
+        webDriver.findElement(passwordFieldLocator).sendKeys(password);
         webDriver.findElement(enterButtonLocator).click();
-        Assertions.assertEquals("Некорректный ввод", webDriver.findElement(errorMessageLocator).getText());
+        Assertions.assertEquals(expectedMessage, webDriver.findElement(errorMessageLocator).getText());
     }
 
-
-    @AfterTest
+    @AfterEach
     public void tearDown() {
         webDriver.quit();
     }
