@@ -70,7 +70,7 @@ public class UserLoginApiTest {
     @Test
     @DisplayName("Авторизация c пустым типом")
     public void testAuthorizationWithEmptyType() {
-        String login = GenerationDataUtil.generateBelarusMobilePhone();
+        String login = GenerationDataUtil.generateEmail();
         String password = GenerationDataUtil.generatePassword();
         String type = "";
 
