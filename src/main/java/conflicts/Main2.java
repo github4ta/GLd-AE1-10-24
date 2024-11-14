@@ -10,5 +10,6 @@ public class Main2 {
         System.out.println("Hello from Eugene Yarosh! This is conflict 2!");
         System.out.println("Hello 2 from Stolybko");
         System.out.println("Bye Bye from Sergei Tsarik.");
+        System.out.println("privet");
     }
 }
