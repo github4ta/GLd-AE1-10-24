@@ -1,5 +1,7 @@
-package by.fiveelement;
+package by.fiveelement.ui;
 
+import by.fiveelement.ui.page.cart.CartPage;
+import by.fiveelement.ui.page.cart.CartPageMessage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

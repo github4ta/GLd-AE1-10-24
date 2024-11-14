@@ -1,4 +1,4 @@
-package by.fiveelement;
+package by.fiveelement.ui.page.cart;
 
 public class CartPageXPath {
     public static final String BUTTON_CATALOG_XPATH = "//*[@id=\"app\"]/header/div[1]/div[2]/div/div[1]/div[1]/div[2]/div[1]/button";

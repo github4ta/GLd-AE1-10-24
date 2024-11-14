@@ -1,5 +1,7 @@
-package by.fiveelement;
+package by.fiveelement.ui;
 
+import by.fiveelement.ui.page.registration.RegistrationMessage;
+import by.fiveelement.ui.page.registration.RegistrationPage;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

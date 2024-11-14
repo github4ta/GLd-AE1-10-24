@@ -1,4 +1,4 @@
-package by.fiveelement;
+package by.fiveelement.ui.page.registration;
 
 public class RegistrationXpath {
 

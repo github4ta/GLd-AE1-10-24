@@ -1,5 +1,7 @@
 package by.fiveelement.api;
 
+import by.fiveelement.api.login.UserLoginApiRequest;
+import by.fiveelement.api.login.UserLoginApiResponse;
 import by.fiveelement.util.GenerationDataUtil;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

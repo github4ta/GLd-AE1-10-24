@@ -1,4 +1,4 @@
-package by.fiveelement.api;
+package by.fiveelement.api.login;
 
 public class UserLoginApiResponse {
     public static final String INVALID_INPUT_MESSAGE = "Некорректный ввод";

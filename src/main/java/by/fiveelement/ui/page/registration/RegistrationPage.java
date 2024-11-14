@@ -1,4 +1,4 @@
-package by.fiveelement;
+package by.fiveelement.ui.page.registration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

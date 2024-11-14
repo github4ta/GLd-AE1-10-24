@@ -1,4 +1,4 @@
-package by.fiveelement;
+package by.fiveelement.ui.page.cart;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;

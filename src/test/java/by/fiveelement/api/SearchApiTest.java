@@ -1,4 +1,4 @@
-package by.fiveelement;
+package by.fiveelement.api;
 
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Test;

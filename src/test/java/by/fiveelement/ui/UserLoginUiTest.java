@@ -1,4 +1,4 @@
-package by.fiveelement;
+package by.fiveelement.ui;
 
 import jdk.jfr.Description;
 import org.junit.jupiter.api.AfterEach;

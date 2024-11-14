@@ -1,4 +1,4 @@
-package by.fiveelement;
+package by.fiveelement.ui;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
