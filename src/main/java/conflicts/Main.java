@@ -5,6 +5,7 @@ public class Main {
         System.out.println("Hello from Stolybko!");
 
         System.out.println("Hello from Sergei Tsarik!");
+        System.out.println("Hello from Aliaksandr Sianiuk");
         System.out.println("privet");
         System.out.println("Hello from Sergei Tsarik!");      
         System.out.println("Hello from Artsiom Mitskevich!");
