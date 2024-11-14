@@ -1,6 +1,6 @@
 package by.fiveelement.api;
 
-import by.fiveelement.ForgotPasswordApiRequest;
+import by.fiveelement.api.login.ForgotPasswordApiRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

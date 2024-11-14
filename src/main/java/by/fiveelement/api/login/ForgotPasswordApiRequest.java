@@ -1,4 +1,4 @@
-package by.fiveelement;
+package by.fiveelement.api.login;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
