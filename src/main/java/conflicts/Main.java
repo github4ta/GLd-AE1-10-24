@@ -18,7 +18,7 @@ public class Main {
                 "──▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄\n" +
                 "──▌▒▒▒▒▒▒▒▒▒▒▒▒▒▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄\n" +
                 "▀█▒▒█▌▒▒█▒▒▐█▒▒▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌\n" +
-                "▀▌▒▒▒▒▒▀▒▀▒▒▒▒▒▀▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐ ▄▄\n" +
+                "▀▌▒▒▒▒▒▀▒▀▒    ▀▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐ ▄▄\n" +
                 "▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▄█▒█\n" +
                 "▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▀\n" +
                 "──▐▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▄▌\n" +
@@ -46,8 +46,10 @@ public class Main {
                 "_____s§§§§§§§???'\n" +
                 "____§§§§???");
         System.out.println("Hello from Pavel Mitrokhin!");
+        System.out.println("Hello from Anatoliy Stavskiy");
         System.out.println("Hello from Eugene Yarosh!");
         System.out.println("Hello from Polina Erdman!");
+
     }
     public static void main(String[] args) {
         System.out.println("Hello from Yuliya Shabaikovich!");
