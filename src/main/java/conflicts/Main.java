@@ -2,8 +2,26 @@ package conflicts;
 
 public class Main {
     public static void main(String[] args) {
+
         System.out.println("Hello from Sergei Tsarik!");
         System.out.println("Hello from Ekaterina Karpovich!");
+        System.out.println("Hello from Sergei Tsarik!");     
+        System.out.println("Hello from Stolybko!");
+        System.out.println("privet");   
+        System.out.println("Hello from Sergei Tsarik!");
+        System.out.println("Hello from Viktoria Zakarian!");
+        System.out.println("Hello from Aliaksandr Sianiuk");
+        System.out.println(------------------------\n" +
+                "───▐▀▄──────▄▀▌───▄▄▄▄▄▄▄\n" +
+                "───▌▒▒▀▄▄▄▄▀▒▒▐▄▀▀▒██▒██▒▀▀▄\n" +
+                "──▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄\n" +
+                "──▌▒▒▒▒▒▒▒▒▒▒▒▒▒▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄\n" +
+                "▀█▒▒█▌▒▒█▒▒▐█▒▒▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌\n" +
+                "▀▌▒▒▒▒▒▀▒▀▒▒▒▒▒▀▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▐ ▄▄\n" +
+                "▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▄█▒█\n" +
+                "▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▀\n" +
+                "──▐▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▄▌\n" +
+                "────▀▄▄▀▀▀▀▄▄▀▀▀▀▀▀▄▄▀▀▀▀▀▀▄▄▀");
         System.out.println("Hello from Sergei Tsarik!");      
         System.out.println("Hello from Artsiom Mitskevich!");
         System.out.println("------------------------\n" +
@@ -27,7 +45,8 @@ public class Main {
                 "_____s§§§§§§§???'\n" +
                 "____§§§§???");
         System.out.println("Hello from Pavel Mitrokhin!");
- System.out.println("Hello from Eugene Yarosh!");
+        System.out.println("Hello from Eugene Yarosh!");
+        System.out.println("Hello from Polina Erdman!");
     }
     public static void main(String[] args) {
         System.out.println("Hello from Yuliya Shabaikovich!");
