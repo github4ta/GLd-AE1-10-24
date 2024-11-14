@@ -2,8 +2,12 @@ package conflicts;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Hello from Stolybko!");
+
         System.out.println("Hello from Sergei Tsarik!");
         System.out.println("Hello from Aliaksandr Sianiuk");
+        System.out.println("privet");
+        System.out.println("Hello from Sergei Tsarik!");      
         System.out.println("Hello from Artsiom Mitskevich!");
         System.out.println("------------------------\n" +
                 "__________s§§§§ss.__.ss§§§§§§§§§ss.\n" +
@@ -26,6 +30,7 @@ public class Main {
                 "_____s§§§§§§§???'\n" +
                 "____§§§§???");
         System.out.println("Hello from Pavel Mitrokhin!");
+ System.out.println("Hello from Eugene Yarosh!");
     }
     public static void main(String[] args) {
         System.out.println("Hello from Yuliya Shabaikovich!");
