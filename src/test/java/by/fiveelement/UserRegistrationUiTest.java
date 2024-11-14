@@ -21,12 +21,12 @@ public class UserRegistrationUiTest {
     @DisplayName("Проверка регистрации и отправки смс")
     public void testAuthorizationAndSendSms() {
         RegistrationPage registrationPage = new RegistrationPage(webDriver);
-        registrationPage.clickAcceptCockie();
-        registrationPage.clickEnterOnStartPage();
-        registrationPage.clickEnterRegistration();
-        registrationPage.inputName("JohnBlack");
-        registrationPage.inputPhone("290000000");
-        registrationPage.clickGetCodeButton();
+        registrationPage.clickAcceptCockie()
+        .clickEnterOnStartPage()
+        .clickEnterRegistration()
+        .inputName("JohnBlack")
+        .inputPhone("290000000")
+        .clickGetCodeButton();
         Assertions.assertEquals(registrationPage.checkSendCode(), RegistrationMessage.INVITE_CODE);
         Assertions.assertTrue(registrationPage.checkSendCodeOnNumber().contains(RegistrationMessage.INVITE_CODE_ON_NUMBER));
     }

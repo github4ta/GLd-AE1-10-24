@@ -18,40 +18,46 @@ public class RegistrationPage {
         this.webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
     }
 
-    public void clickEnterOnStartPage() {
+    public RegistrationPage clickEnterOnStartPage() {
         By clickButtonBy = By.xpath(RegistrationXpath.ENTER_BUTTON_XPATH);
         WebElement clickButtonWebElement = webDriver.findElement(clickButtonBy);
         clickButtonWebElement.click();
+        return this;
     }
 
-    public void clickEnterRegistration() {
+    public RegistrationPage clickEnterRegistration() {
         By clickRegistrationButtonBy = By.xpath(RegistrationXpath.ENTER_REGISTRATION_BUTTON_XPATH);
         WebElement enterRegistrationButtonWebElement = webDriver.findElement(clickRegistrationButtonBy);
         enterRegistrationButtonWebElement.click();
+        return this;
     }
 
-    public void clickAcceptCockie() {
+    public RegistrationPage clickAcceptCockie() {
         By clickAcceptCockieBy = By.xpath(RegistrationXpath.ACCEPT_COCKIE);
         WebElement clickAcceptCockieWebElement = webDriver.findElement(clickAcceptCockieBy);
         clickAcceptCockieWebElement.click();
+        return this;
     }
 
-    public void clickGetCodeButton() {
+    public RegistrationPage clickGetCodeButton() {
         By clickGetCodeButtonnBy = By.xpath(RegistrationXpath.GET_CODE_IN_VIBER_OR_SMS_XPATH);
         WebElement clickGetCodeButtonnWebElement = webDriver.findElement(clickGetCodeButtonnBy);
         clickGetCodeButtonnWebElement.click();
+        return this;
     }
 
-    public void inputName(String name) {
+    public RegistrationPage inputName(String name) {
         By inputNameBy = By.xpath(RegistrationXpath.INPUT_NAME_XPATH);
         WebElement inputNameWebElement = webDriver.findElement(inputNameBy);
         inputNameWebElement.sendKeys(name);
+        return this;
     }
 
-    public void inputPhone(String phone) {
+    public RegistrationPage inputPhone(String phone) {
         By inputPhoneBy = By.xpath(RegistrationXpath.INPUT_PHONE_XPATH);
         WebElement inputPhoneWebElement = webDriver.findElement(inputPhoneBy);
         inputPhoneWebElement.sendKeys(phone);
+        return this;
     }
 
     public String checkSendCode() {
