@@ -49,5 +49,6 @@ public class Main {
         System.out.println("Hello from Eugene Yarosh!");
         System.out.println("Hello from Polina Erdman!");
         System.out.println("Hello from Yuliya Shabaikovich!");
+        System.out.println("Hello from Eugene Yarosh! This is conflict 2!");
     }
 }
