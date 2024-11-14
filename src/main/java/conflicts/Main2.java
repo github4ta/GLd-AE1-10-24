@@ -12,5 +12,6 @@ public class Main2 {
         System.out.println("Bye Bye from Sergei Tsarik.");
         System.out.println("privet");
         System.out.println("Hello from Yuliya Shabaikovich!");
+        System.out.println("Hello 2 from Polina Erdman.");
     }
 }
