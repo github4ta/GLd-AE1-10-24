@@ -11,5 +11,5 @@ public class HomePageXpath {
     public static final String PUBLIC_CONTRACTS_XPATH  = "//a[@href='https://blog.onliner.by/publichnye-dogovory']";
     public static final String FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH = "//li[@class='footer-style__item'][9]";
     public static final String FOOTER_LINK_USER_SUPPORT_XPATH = "//li[@class='footer-style__item'][10]";
-    public static final String FOOTER_LINK_RETURN_POLICY_XPATH = "///li[@class='footer-style__item'][11]";
+    public static final String FOOTER_LINK_RETURN_POLICY_XPATH = "//li[@class='footer-style__item'][11]";
 }
