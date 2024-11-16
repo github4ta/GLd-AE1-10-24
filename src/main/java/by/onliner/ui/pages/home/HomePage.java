@@ -17,7 +17,8 @@ public class HomePage {
         return driver.findElement(By.xpath(HomePageXpath.TARIFFS_XPATH)).getText();
     }
 
-    public String getVacanciesFooterLinkText(){
-        return driver.findElement(By.xpath(HomePageXpath.VACANCIES_XPATH)).getText();
+    public HomePage clickVacanciesFooterLink(){
+        driver.findElement(By.xpath(HomePageXpath.VACANCIES_XPATH)).click();
+        return this;
     }
 }
