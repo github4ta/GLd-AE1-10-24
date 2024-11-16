@@ -16,7 +16,8 @@ public class HomePage {
         return driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_XPATH)).getText();
     }
 
-    public void clickLinkPublicContracts(){
+    public HomePage clickLinkPublicContracts(){
         driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_XPATH)).click();
+        return this;
     }
 }
