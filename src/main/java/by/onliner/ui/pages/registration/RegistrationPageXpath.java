@@ -14,4 +14,10 @@ public class RegistrationPageXpath {
     public static final String LOGIN_BUTTON_XPATH = "//a[@href='/login']";
     public static final String DO_YOU_HAVE_PROFILE_TEXT_XPATH = "//div[contains(text(),'Есть профиль на Onlíner?')]";
     public static final String COPYRIGHT_TEXT_XPATH = "//div[@class='auth-form__footer']";
+
+    public static final String HEADER_TEXT_XPATH = "//div[contains(@class, 'auth-form__title')]";
+    public static final String DESCRIPTION_SOCIAL_MEDIA_REGISTRATION_TEXT_XPATH = "(//div[@class='auth-form__label-title'])[1]";
+    public static final String FACEBOOK_REGISTRATION_BUTTON_XPATH = "//a[contains(@class,'auth-form__button_fb')]";
+    public static final String VK_REGISTRATION_BUTTON_XPATH = "//a[contains(@class,'auth-form__button_vk')]";
+    public static final String GOOGLE_REGISTRATION_BUTTON_XPATH = "//a[contains(@class,'auth-form__button_gg')]";
 }
