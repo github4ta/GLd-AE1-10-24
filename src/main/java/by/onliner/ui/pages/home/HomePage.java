@@ -12,6 +12,14 @@ public class HomePage {
         driver = Driver.getDriver();
     }
 
+    public String getSiteRulesLinkText(){
+        return driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_XPATH)).getText();
+    }
+
+    public HomePage clickLinkPublicContracts(){
+        driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_XPATH)).click();
+        return this;
+    }
     public String getTextAdvertisingLink() {
         return driver.findElement(By.xpath(HomePageXpath.ADVERTISING_LINK_XPATH)).getText();
     }
