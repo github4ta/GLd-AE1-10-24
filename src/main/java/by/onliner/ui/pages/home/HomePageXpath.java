@@ -12,4 +12,9 @@ public class HomePageXpath {
     public static final String FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH = "//li[@class='footer-style__item'][9]";
     public static final String FOOTER_LINK_USER_SUPPORT_XPATH = "//li[@class='footer-style__item'][10]";
     public static final String FOOTER_LINK_RETURN_POLICY_XPATH = "//li[@class='footer-style__item'][11]";
+    public static final String VK_BUTTON_XPATH = "//a[@href='https://vk.com/onliner']";
+    public static final String FACEBOOK_BUTTON_XPATH = "//a[@href='https://facebook.com/onlinerby']";
+    public static final String TWITTER_BUTTON_XPATH = "//a[@href='https://twitter.com/OnlinerBY']";
+    public static final String YOUTUBE_BUTTON_XPATH = "//a[@href='https://youtube.com/onlinerby']";
+    public static final String COPYRIGHT_XPATH = "//div[@class='footer-style__copy']";
 }
