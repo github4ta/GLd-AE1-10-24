@@ -14,20 +14,20 @@ public class HomePage {
     }
 
     public String getTariffsFooterLinkText(){
-        return driver.findElement(By.xpath(HomePageXpath.TARIFFS_XPATH)).getText();
+        return driver.findElement(By.xpath(HomePageXpath.TARIFFS_LINK_XPATH)).getText();
     }
 
     public HomePage clickVacanciesFooterLink(){
-        driver.findElement(By.xpath(HomePageXpath.VACANCIES_XPATH)).click();
+        driver.findElement(By.xpath(HomePageXpath.VACANCIES_LINK_XPATH)).click();
         return this;
     }
 
     public String getSiteRulesLinkText() {
-        return driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_XPATH)).getText();
+        return driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_LINK_XPATH)).getText();
     }
 
     public HomePage clickLinkPublicContracts() {
-        driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_XPATH)).click();
+        driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_LINK_XPATH)).click();
         return this;
     }
 
@@ -63,5 +63,6 @@ public class HomePage {
 
     public HomePage clickLinkUserAgreement() {
         driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_LINK_XPATH)).click();
+        return this;
     }
 }
