@@ -12,19 +12,20 @@ public class HomePage {
         driver = Driver.getDriver();
     }
 
-    public String getSiteRulesLinkText(){
-        return driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_XPATH)).getText();
-    }
+//    public String getSiteRulesLinkText() {
+//        return driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_XPATH)).getText();
+//    }
+//
+//    public HomePage clickLinkPublicContracts() {
+//        driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_XPATH)).click();
+//        return this;
+//    }
 
-    public HomePage clickLinkPublicContracts(){
-        driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_XPATH)).click();
-        return this;
-    }
     public String getTextAdvertisingLink() {
         return driver.findElement(By.xpath(HomePageXpath.ADVERTISING_LINK_XPATH)).getText();
     }
 
-    public String getVacanciesLinkText(){
+    public String getVacanciesLinkText() {
         return driver.findElement(By.xpath(HomePageXpath.VACANCIES_LINK_XPATH)).getText();
     }
 
@@ -33,7 +34,7 @@ public class HomePage {
         return this;
     }
 
-    public void clickManifestLink(){
+    public void clickManifestLink() {
         driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH)).click();
     }
 
@@ -43,6 +44,15 @@ public class HomePage {
 
     public HomePage clickLinkAdvertising() {
         driver.findElement(By.xpath(HomePageXpath.ADVERTISING_LINK_XPATH)).click();
+        return this;
+    }
+
+    public String getTextManifest() {
+        return driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH)).getText();
+    }
+
+    public HomePage clickLinkUserAgreement() {
+        driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_LINK_XPATH)).click();
         return this;
     }
 }
