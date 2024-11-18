@@ -1,5 +1,5 @@
 package by.onliner.ui;
 
-public class HomePageTest {
+public class HomePageTest extends BaseTest {
 
 }
