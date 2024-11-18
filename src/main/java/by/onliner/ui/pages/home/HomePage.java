@@ -65,4 +65,11 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_LINK_XPATH)).click();
         return this;
     }
+
+    public void clickAboutCompanyLink() {
+        driver.findElement(By.xpath(HomePageXpath.ABOUT_COMPANY_LINK_XPATH)).click();
+    }
+    public String getTextReturnPolicy() {
+        return driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_RETURN_POLICY_XPATH)).getText();
+    }
 }
