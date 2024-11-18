@@ -13,11 +13,11 @@ public class HomePage {
     }
 
     public String getSiteRulesLinkText() {
-        return driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_XPATH)).getText();
+        return driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_LINK_XPATH)).getText();
     }
 
     public HomePage clickLinkPublicContracts() {
-        driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_XPATH)).click();
+        driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_LINK_XPATH)).click();
         return this;
     }
 
