@@ -76,16 +76,16 @@ public class HomePage {
         return this;
     }
 
-    public WebDriver getDriver() {
-        return driver;
-    }
-
     public String getTextFromAboutCompanyElement() {
-        return getDriver().findElement(By.xpath(HomePageXpath.ABOUT_COMPANY_XPATH)).getText();
+        return getDriver().findElement(By.xpath(HomePageXpath.ABOUT_COMPANY_LINK_XPATH)).getText();
     }
 
     public HomePage clickEditorContacts() {
-        getDriver().findElement(By.xpath(HomePageXpath.EDITOR_CONTACTS_XPATH)).click();
+        getDriver().findElement(By.xpath(HomePageXpath.EDITOR_CONTACTS_LINK_XPATH)).click();
         return this;
+    }
+
+    public WebDriver getDriver() {
+        return driver;
     }
 }
