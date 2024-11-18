@@ -10,7 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class CartPage {
+public class
+CartPage {
     public WebDriver webDriver;
     public WebDriverWait webDriverWait;
 
@@ -46,4 +47,17 @@ public class CartPage {
     public String getTextAboutSmartphone() {
         return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CartPageXPath.TEXT_ADD_TO_CART_XPATH))).getText();
     }
+
+    public CartPage clickButtonGoToCart() {
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath(CartPageXPath.BUTTON_GO_TO_CART_XPATH))).click();
+        return this;
+    }
+    public CartPage clickButtonCancelToCart() {
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath(CartPageXPath.BUTTON_CANCEL_ORDER_XPATH))).click();
+        return this;
+    }
+    public String getTextAfterCancelItem () {
+        return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(CartPageXPath.TEXT_AFTER_CANCEL_ITEM_XPATH))).getText();
+    }
+
 }

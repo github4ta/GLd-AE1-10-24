@@ -2,6 +2,8 @@ package by.onliner.ui.pages.home;
 
 import by.onliner.ui.driver.Driver;
 import org.openqa.selenium.By;
+import by.onliner.ui.pages.login.LoginPageXpath;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
@@ -10,6 +12,68 @@ public class HomePage {
 
     public HomePage() {
         driver = Driver.getDriver();
+    }
+
+    public String getTariffsFooterLinkText(){
+        return driver.findElement(By.xpath(HomePageXpath.TARIFFS_LINK_XPATH)).getText();
+    }
+
+    public String getSiteRulesLinkText() {
+        return driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_LINK_XPATH)).getText();
+    }
+
+    public String getTextAdvertisingLink() {
+        return driver.findElement(By.xpath(HomePageXpath.ADVERTISING_LINK_XPATH)).getText();
+    }
+
+    public String getVacanciesLinkText() {
+        return driver.findElement(By.xpath(HomePageXpath.VACANCIES_LINK_XPATH)).getText();
+    }
+
+    public String getTextEditorContacts() {
+        return driver.findElement(By.xpath(HomePageXpath.EDITOR_CONTACTS_LINK_XPATH)).getText();
+    }
+
+    public String getTextManifest() {
+        return driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH)).getText();
+    }
+
+    public String getTextUserSupportLink() {
+        return driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).getText();
+    }
+
+    public HomePage clickLinkUserAgreement() {
+        driver.findElement(By.xpath(HomePageXpath.USER_AGREEMENT_LINK_XPATH)).click();
+        return this;
+    }
+
+    public HomePage clickReturnPolicyLink() {
+        driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_RETURN_POLICY_XPATH)).click();
+        return this;
+    }
+
+    public HomePage clickLinkPublicContracts() {
+        driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_LINK_XPATH)).click();
+        return this;
+    }
+
+    public HomePage clickVacanciesFooterLink(){
+        driver.findElement(By.xpath(HomePageXpath.VACANCIES_LINK_XPATH)).click();
+        return this;
+    }
+
+    public HomePage clickTariffsLink() {
+        driver.findElement(By.xpath(HomePageXpath.TARIFFS_LINK_XPATH)).click();
+        return this;
+    }
+
+    public void clickManifestLink() {
+        driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH)).click();
+    }
+
+    public HomePage clickLinkAdvertising() {
+        driver.findElement(By.xpath(HomePageXpath.ADVERTISING_LINK_XPATH)).click();
+        return this;
     }
 
     public WebDriver getDriver() {
