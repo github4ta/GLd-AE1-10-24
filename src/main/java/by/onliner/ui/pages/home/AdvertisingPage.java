@@ -1,6 +1,7 @@
 package by.onliner.ui.pages.home;
 
 import by.onliner.ui.driver.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AdvertisingPage {
@@ -17,5 +18,9 @@ public class AdvertisingPage {
 
     public static String getUrl(){
         return "https://b2breg.onliner.by/advertising";
+    }
+
+    public String getTitle(){
+        return driver.findElement(By.xpath(AdvertisingPageXpath.TITLE)).getText();
     }
 }
