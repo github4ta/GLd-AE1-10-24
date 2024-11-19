@@ -17,5 +17,4 @@ public class HomePageTest extends BaseTest {
 
         Assertions.assertEquals(expectedResult, actualResult, "Неверный текст ссылки" );
     }
-
 }
