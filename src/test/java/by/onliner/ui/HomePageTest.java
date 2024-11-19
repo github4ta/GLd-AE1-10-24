@@ -15,7 +15,7 @@ public class HomePageTest extends BaseTest {
         String expectedResult = "Контакты редакции";
         String actualResult = homePage.getTextEditorContacts();
 
-        Assertions.assertEquals(expectedResult, actualResult, "Неверный текст ссылки" );
+        Assertions.assertEquals(expectedResult, actualResult, "Неверный текст ссылки");
     }
 
     @Test
