@@ -71,9 +71,9 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH)).click();
     }
 
-    public HomePage clickLinkAdvertising() {
+    public AdvertisingPage clickLinkAdvertising() {
         driver.findElement(By.xpath(HomePageXpath.ADVERTISING_LINK_XPATH)).click();
-        return this;
+        return new AdvertisingPage(this.driver);
     }
 
     public String getTextFromAboutCompanyElement() {
