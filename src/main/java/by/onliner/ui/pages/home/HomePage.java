@@ -2,8 +2,6 @@ package by.onliner.ui.pages.home;
 
 import by.onliner.ui.driver.Driver;
 import org.openqa.selenium.By;
-import by.onliner.ui.pages.login.LoginPageXpath;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
@@ -87,5 +85,9 @@ public class HomePage {
 
     public WebDriver getDriver() {
         return driver;
+    }
+
+    public String getTextPersonalDataProcessingPolicy(){
+        return getDriver().findElement(By.xpath(HomePageXpath.FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH)).getText();
     }
 }
