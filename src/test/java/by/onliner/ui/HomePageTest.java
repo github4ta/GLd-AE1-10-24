@@ -1,10 +1,9 @@
 package by.onliner.ui;
 
-import by.onliner.ui.pages.home.HomePageXpath;
+import by.onliner.ui.pages.home.HomePage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 public class HomePageTest extends BaseTest {
 
@@ -17,12 +16,14 @@ public class HomePageTest extends BaseTest {
         String actualResult = homePage.getTextEditorContacts();
 
         Assertions.assertEquals(expectedResult, actualResult, "Неверный текст ссылки" );
+    }
 
+    @Test
     @DisplayName("Текст Политика обработки персональных данных отоборажается в футере")
     public void testDisplayTextPersonalDataProcessingPolicy(){
         HomePage homePage = new HomePage();
         String expectedText = "Политика обработки персональных данных";
         String actualText= homePage.getTextPersonalDataProcessingPolicy();
-        Assertions.assertTrue(actualText.equals(expectedText), "Неверный текст ссылки");
+        Assertions.assertEquals(expectedText, actualText, "Неверный текст ссылки");
     }
 }
