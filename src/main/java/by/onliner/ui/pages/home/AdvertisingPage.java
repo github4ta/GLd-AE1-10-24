@@ -16,10 +16,6 @@ public class AdvertisingPage {
         this.driver = driver;
     }
 
-    public static String getUrl(){
-        return "https://b2breg.onliner.by/advertising";
-    }
-
     public String getTitle(){
         return driver.findElement(By.xpath(AdvertisingPageXpath.TITLE)).getText();
     }
