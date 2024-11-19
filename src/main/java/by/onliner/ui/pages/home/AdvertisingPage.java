@@ -14,4 +14,8 @@ public class AdvertisingPage {
     public AdvertisingPage(WebDriver driver){
         this.driver = driver;
     }
+
+    public static String getUrl(){
+        return "https://b2breg.onliner.by/advertising";
+    }
 }
