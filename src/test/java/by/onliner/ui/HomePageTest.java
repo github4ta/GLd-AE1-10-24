@@ -4,7 +4,6 @@ import by.onliner.ui.pages.home.HomePage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 public class HomePageTest extends BaseTest {
 
@@ -21,10 +20,10 @@ public class HomePageTest extends BaseTest {
 
     @Test
     @DisplayName("Текст Политика обработки персональных данных отоборажается в футере")
-    public void testDisplayTextPersonalDataProcessingPolicy(){
+    public void testDisplayTextPersonalDataProcessingPolicy() {
         HomePage homePage = new HomePage();
         String expectedText = "Политика обработки персональных данных";
-        String actualText= homePage.getTextPersonalDataProcessingPolicy();
+        String actualText = homePage.getTextPersonalDataProcessingPolicy();
         Assertions.assertEquals(expectedText, actualText, "Неверный текст ссылки");
     }
 
@@ -35,5 +34,13 @@ public class HomePageTest extends BaseTest {
 
         String expectedResult = "Реклама";
         Assertions.assertEquals(expectedResult, homePage.getTextAdvertisingLink());
+    }
+
+    @Test
+    @DisplayName("Текст ссылки 'Правила возврата' отображается в футере")
+    public void testDisplayReturnPolicyLinkInFooter() {
+        HomePage homePage = new HomePage();
+        String expectedResultReturnPolicy = "Правила возврата";
+        Assertions.assertEquals(expectedResultReturnPolicy, homePage.getTextReturnPolicy());
     }
 }
