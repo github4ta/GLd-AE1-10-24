@@ -90,6 +90,7 @@ public class HomePage {
     public HomePage clickLinkPersonalDataProcessingPolicy() {
         driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH)).click();
         return this;
+    }
 
     public WebDriver getDriver() {
         return driver;
