@@ -2,8 +2,6 @@ package by.onliner.ui.pages.home;
 
 import by.onliner.ui.driver.Driver;
 import org.openqa.selenium.By;
-import by.onliner.ui.pages.login.LoginPageXpath;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
@@ -85,7 +83,28 @@ public class HomePage {
         return this;
     }
 
+    public void clickAboutCompanyLink() {
+        driver.findElement(By.xpath(HomePageXpath.ABOUT_COMPANY_LINK_XPATH)).click();
+    }
+
+    public String getTextReturnPolicy() {
+        return driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_RETURN_POLICY_XPATH)).getText();
+    }
+  
+    public String getTextPublicContracts() {
+        return driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_LINK_XPATH)).getText();
+    }
+
+    public HomePage clickLinkPersonalDataProcessingPolicy() {
+        driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH)).click();
+        return this;
+    }
+  
     public WebDriver getDriver() {
         return driver;
+    }
+
+    public String getTextPersonalDataProcessingPolicy(){
+        return getDriver().findElement(By.xpath(HomePageXpath.FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH)).getText();
     }
 }

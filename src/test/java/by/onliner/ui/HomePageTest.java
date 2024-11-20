@@ -1,33 +1,39 @@
 package by.onliner.ui;
 
 import by.onliner.ui.pages.home.HomePage;
-import by.onliner.ui.pages.home.HomePageXpath;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
 
 public class HomePageTest extends BaseTest {
-    private WebDriver driver;
-    private HomePage homepage;
 
-    @BeforeEach
-    public void setup() {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.onliner.by/");
-        driver.manage().window().fullscreen();
-        this.driver = driver;
+    @Test
+    @DisplayName("Отображение ссылки 'Контакты редакции' в футере страницы")
+    public void testDisplayEditorContactsLink() {
+        HomePage homePage = new HomePage();
 
-        this.homepage = new HomePage(this.driver);
+        String expectedResult = "Контакты редакции";
+        String actualResult = homePage.getTextEditorContacts();
 
-
-        @Test
-        @DisplayName("Правила возврата в футере на домашней странице")
-        public void returnPolicy() {
-            this.homepage.clickReturnPolicyLink();
-            Assertions.assertEquals(HomePageXpath.FOOTER_LINK_RETURN_POLICY_XPATH, HomePage.getTextReturnPolicy);
-        }
+        Assertions.assertEquals(expectedResult, actualResult, "Неверный текст ссылки");
     }
+
+    @Test
+    @DisplayName("Текст Политика обработки персональных данных отоборажается в футере")
+    public void testDisplayTextPersonalDataProcessingPolicy(){
+        HomePage homePage = new HomePage();
+        String expectedText = "Политика обработки персональных данных";
+        String actualText= homePage.getTextPersonalDataProcessingPolicy();
+        Assertions.assertEquals(expectedText, actualText, "Неверный текст ссылки");
     }
+
+    @Test
+    @DisplayName("Текст ссылки 'Реклама' отображается в футере")
+    public void testDisplayAdvertisingLink() {
+        HomePage homePage = new HomePage();
+
+        String expectedResult = "Реклама";
+        Assertions.assertEquals(expectedResult, homePage.getTextAdvertisingLink());
+    }
+}
