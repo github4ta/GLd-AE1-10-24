@@ -36,4 +36,12 @@ public class HomePageTest extends BaseTest {
         String expectedResult = "Реклама";
         Assertions.assertEquals(expectedResult, homePage.getTextAdvertisingLink());
     }
+
+    @Test
+    @DisplayName("Текст ссылки 'Манифест' отображается в футере")
+    public void testDisplayManifestLink() {
+        HomePage homePage = new HomePage();
+        String expectedResult = "Манифест";
+        Assertions.assertEquals(expectedResult, homePage.getTextManifest());
+    }
 }
