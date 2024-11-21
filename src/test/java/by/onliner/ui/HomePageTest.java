@@ -45,18 +45,18 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Текст ссылки 'Тарифы' отображается в футере")
-    public void testDisplayTariffsLink() {
-        HomePage homePage = new HomePage();
-        String expectedResult = "Тарифы";
-        Assertions.assertEquals(expectedResult, homePage.getTariffsFooterLinkText());
-    }
-
-    @Test
     @DisplayName("Текст ссылки 'Правила возврата' отображается в футере")
     public void testDisplayReturnPolicyLinkInFooter() {
         HomePage homePage = new HomePage();
         String expectedResultReturnPolicy = "Правила возврата";
         Assertions.assertEquals(expectedResultReturnPolicy, homePage.getTextReturnPolicy());
+    }
+
+    @Test
+    @DisplayName("Текст ссылки 'Тарифы' отображается в футере")
+        public void testDisplayTariffsLink() {
+        HomePage homePage = new HomePage();
+        String expectedResultTariffs = "Тарифы";
+        Assertions.assertEquals(expectedResultTariffs, homePage.getTariffsFooterLinkText(), "Неверный текст ссылки");
     }
 }
