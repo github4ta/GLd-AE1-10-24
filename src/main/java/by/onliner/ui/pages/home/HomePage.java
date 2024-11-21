@@ -69,9 +69,9 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH)).click();
     }
 
-    public HomePage clickLinkAdvertising() {
+    public AdvertisingPage clickLinkAdvertising() {
         driver.findElement(By.xpath(HomePageXpath.ADVERTISING_LINK_XPATH)).click();
-        return this;
+        return new AdvertisingPage(this.driver);
     }
 
     public String getTextFromAboutCompanyElement() {
@@ -83,6 +83,14 @@ public class HomePage {
         return this;
     }
 
+    public void clickAboutCompanyLink() {
+        driver.findElement(By.xpath(HomePageXpath.ABOUT_COMPANY_LINK_XPATH)).click();
+    }
+
+    public String getTextReturnPolicy() {
+        return driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_RETURN_POLICY_XPATH)).getText();
+    }
+  
     public String getTextPublicContracts() {
         return driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_LINK_XPATH)).getText();
     }
@@ -90,7 +98,8 @@ public class HomePage {
     public HomePage clickLinkPersonalDataProcessingPolicy() {
         driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH)).click();
         return this;
-
+    }
+  
     public WebDriver getDriver() {
         return driver;
     }
