@@ -59,4 +59,13 @@ public class HomePageTest extends BaseTest {
         String expectedResultTariffs = "Тарифы";
         Assertions.assertEquals(expectedResultTariffs, homePage.getTariffsFooterLinkText(), "Неверный текст ссылки");
     }
+
+    @Test
+    @DisplayName("Текст ссылки 'Публичные договоры' отображается в футере")
+    public void testDisplayPublicContractsLink() {
+        HomePage homePage = new HomePage();
+
+        String expectedResult = "Публичные договоры";
+        Assertions.assertEquals(expectedResult, homePage.getTextPublicContracts());
+    }
 }
