@@ -4,7 +4,6 @@ import by.onliner.ui.pages.home.HomePage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 public class HomePageTest extends BaseTest {
 
@@ -35,6 +34,30 @@ public class HomePageTest extends BaseTest {
 
         String expectedResult = "Реклама";
         Assertions.assertEquals(expectedResult, homePage.getTextAdvertisingLink());
+    }
+
+    @Test
+    @DisplayName("Текст ссылки 'Манифест' отображается в футере")
+    public void testDisplayManifestLink() {
+        HomePage homePage = new HomePage();
+        String expectedResult = "Манифест";
+        Assertions.assertEquals(expectedResult, homePage.getTextManifest());
+    }
+
+    @Test
+    @DisplayName("Текст ссылки 'Правила возврата' отображается в футере")
+    public void testDisplayReturnPolicyLinkInFooter() {
+        HomePage homePage = new HomePage();
+        String expectedResultReturnPolicy = "Правила возврата";
+        Assertions.assertEquals(expectedResultReturnPolicy, homePage.getTextReturnPolicy());
+    }
+
+    @Test
+    @DisplayName("Текст ссылки 'Тарифы' отображается в футере")
+        public void testDisplayTariffsLink() {
+        HomePage homePage = new HomePage();
+        String expectedResultTariffs = "Тарифы";
+        Assertions.assertEquals(expectedResultTariffs, homePage.getTariffsFooterLinkText(), "Неверный текст ссылки");
     }
 
     @Test
