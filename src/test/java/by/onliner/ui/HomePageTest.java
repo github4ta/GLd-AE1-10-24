@@ -51,4 +51,15 @@ public class HomePageTest extends BaseTest {
         String expectedResultReturnPolicy = "Правила возврата";
         Assertions.assertEquals(expectedResultReturnPolicy, homePage.getTextReturnPolicy());
     }
+
+    @Test
+    @DisplayName("Отображение ссылки 'Вакансии' в футере страницы")
+    public void testDisplayVacanciesLinkInFooter() {
+        HomePage homePage = new HomePage();
+
+        String expectedResult = "Вакансии";
+        String actualResult = homePage.getVacanciesLinkText();
+
+        Assertions.assertEquals(expectedResult, actualResult, "Неверный текст ссылки");
+    }
 }
