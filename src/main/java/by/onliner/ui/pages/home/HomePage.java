@@ -12,8 +12,13 @@ public class HomePage {
         driver = Driver.getDriver();
     }
 
-    public String getTariffsFooterLinkText(){
+    public String getTariffsFooterLinkText() {
         return driver.findElement(By.xpath(HomePageXpath.TARIFFS_LINK_XPATH)).getText();
+    }
+
+    public HomePage clickVacanciesFooterLink() {
+        driver.findElement(By.xpath(HomePageXpath.VACANCIES_LINK_XPATH)).click();
+        return this;
     }
 
     public String getSiteRulesLinkText() {
@@ -55,11 +60,6 @@ public class HomePage {
         return this;
     }
 
-    public HomePage clickVacanciesFooterLink(){
-        driver.findElement(By.xpath(HomePageXpath.VACANCIES_LINK_XPATH)).click();
-        return this;
-    }
-
     public HomePage clickTariffsLink() {
         driver.findElement(By.xpath(HomePageXpath.TARIFFS_LINK_XPATH)).click();
         return this;
@@ -90,7 +90,7 @@ public class HomePage {
     public String getTextReturnPolicy() {
         return driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_RETURN_POLICY_XPATH)).getText();
     }
-  
+
     public String getTextPublicContracts() {
         return driver.findElement(By.xpath(HomePageXpath.PUBLIC_CONTRACTS_LINK_XPATH)).getText();
     }
@@ -99,12 +99,17 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH)).click();
         return this;
     }
-  
+
     public WebDriver getDriver() {
         return driver;
     }
 
     public String getTextPersonalDataProcessingPolicy(){
         return getDriver().findElement(By.xpath(HomePageXpath.FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH)).getText();
+    }
+
+    public HomePage clickLinkUserSupport() {
+        driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).click();
+        return this;
     }
 }
