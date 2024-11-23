@@ -79,4 +79,14 @@ public class HomePageTest extends BaseTest {
         String expectedResult = "Публичные договоры";
         Assertions.assertEquals(expectedResult, homePage.getTextPublicContracts());
     }
+
+    @Test
+    @DisplayName("Проверка открытия страницы Форум")
+    public void testOpenPageForum() {
+        HomePage homePage = new HomePage();
+        homePage.clickLinkForum();
+        String expectedText = "Форум";
+
+        Assertions.assertEquals(expectedText, homePage.getTextForum(), "Неверная страница открыта");
+    }
 }

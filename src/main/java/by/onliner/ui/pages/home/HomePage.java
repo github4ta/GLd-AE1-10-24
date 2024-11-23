@@ -112,4 +112,14 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).click();
         return this;
     }
+
+    public HomePage clickLinkForum() {
+        driver.findElement(By.xpath(HomePageXpath.FORUM_XPATH)).click();
+        return this;
+    }
+
+    public String getTextForum(){
+        return driver.findElement(By.xpath(HomePageXpath.FORUM_TEXT_XPATH)).getText();
+    }
+
 }
