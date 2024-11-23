@@ -112,4 +112,9 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).click();
         return this;
     }
+
+    public HomePage clickLinkCatalog() {
+        driver.findElement(By.xpath(HomePageXpath.CATALOG_XPATH)).click();
+        return this;
+    }
 }
