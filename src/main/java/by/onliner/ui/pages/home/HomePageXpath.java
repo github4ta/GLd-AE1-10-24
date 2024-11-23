@@ -29,4 +29,6 @@ public class HomePageXpath {
     public static final String MANIFEST_TEXT_XPATH ="//h1[text()='Манифест']";
     public static final String MANIFEST_TITLE = "Манифест";
     public static final String MANIFEST_LINK = "https://blog.onliner.by/manifest";
+    public static final String SERVICES_TEXT_XPATH = "//div[@class='service-header__title service-header__title_huge'][text()='Заказы']";
+
 }
