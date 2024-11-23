@@ -27,5 +27,4 @@ public class HomePageXpath {
     public static final String SEARCH_STRING_XPATH = "//input[@class='fast-search__input ym-record-keys']";
     public static final String BUTTON_ENTRANCE_XPATH = "//div[text()='Вход']";
     public static final String FORUM_TEXT_XPATH = "//*[@class=\"m-title\"]";
-
 }
