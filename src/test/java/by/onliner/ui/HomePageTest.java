@@ -1,6 +1,7 @@
 package by.onliner.ui;
 
 import by.onliner.ui.pages.home.HomePage;
+import by.onliner.ui.pages.home.HomePageMessage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -78,5 +79,14 @@ public class HomePageTest extends BaseTest {
 
         String expectedResult = "Публичные договоры";
         Assertions.assertEquals(expectedResult, homePage.getTextPublicContracts());
+    }
+
+    @Test
+    @DisplayName("Проверка открытия страницы Услуги")
+    public void testOpenPageServices() {
+        HomePage homePage = new HomePage();
+        homePage.clickLinkServices();
+
+        Assertions.assertEquals(HomePageMessage.SERVICES_TITLE, homePage.getTextServices(), "Неверная страница открыта");
     }
 }
