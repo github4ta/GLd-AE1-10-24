@@ -118,4 +118,15 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).click();
         return this;
     }
+
+
+    public HomePage clickLinkServices() {
+        driver.findElement(By.xpath(HomePageXpath.SERVICES_XPATH)).click();
+        return this;
+    }
+
+    public String getTextServices(){
+        return driver.findElement(By.xpath(HomePageXpath.SERVICES_TEXT_XPATH)).getText();
+    }
+
 }
