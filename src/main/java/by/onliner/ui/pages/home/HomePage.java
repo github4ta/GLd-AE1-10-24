@@ -2,7 +2,9 @@ package by.onliner.ui.pages.home;
 
 import by.onliner.ui.driver.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class HomePage {
 
@@ -65,8 +67,12 @@ public class HomePage {
         return this;
     }
 
-    public void clickManifestLink() {
-        driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH)).click();
+    public ManifestPage clickManifestLink() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement element = driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH));
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        element.click();
+        return new ManifestPage(this.driver);
     }
 
     public AdvertisingPage clickLinkAdvertising() {
@@ -100,7 +106,7 @@ public class HomePage {
         return this;
     }
 
-    public WebDriver getDriver() {
+   public WebDriver getDriver() {
         return driver;
     }
 
