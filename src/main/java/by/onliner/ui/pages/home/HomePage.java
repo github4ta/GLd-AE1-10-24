@@ -112,4 +112,8 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).click();
         return this;
     }
+
+    public void clickHousesAndFlatsLink() {
+        driver.findElement(By.xpath(HomePageXpath.HOUSES_AND_FLATS_XPATH)).click();
+    }
 }
