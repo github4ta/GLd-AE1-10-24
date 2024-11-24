@@ -1,9 +1,12 @@
 package by.onliner.ui;
 
 import by.onliner.ui.pages.home.HomePage;
+import by.onliner.ui.pages.home.HousesAndFlatsPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 public class HomePageTest extends BaseTest {
 
@@ -78,5 +81,16 @@ public class HomePageTest extends BaseTest {
 
         String expectedResult = "Публичные договоры";
         Assertions.assertEquals(expectedResult, homePage.getTextPublicContracts());
+    }
+
+    @Test
+    @DisplayName("Открытие вкладки 'Дома и квартиры'")
+    public void testOpenHousesAndFlatsPage() {
+        HomePage homePage = new HomePage();
+        homePage.clickHousesAndFlatsLink();
+        final List<String> expectedTabNames = List.of("Продажа", "Аренда");
+        final List<String> actualTabNames = new HousesAndFlatsPage().getTabNames();
+
+        Assertions.assertEquals(expectedTabNames,actualTabNames, "Неккоректные названия вкладок" );
     }
 }
