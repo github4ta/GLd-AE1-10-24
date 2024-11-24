@@ -116,4 +116,9 @@ public class HomePage {
     public String getTextSupportUser() {
         return getDriver().findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).getText();
     }
+
+    public HomePage clickLinkCatalog() {
+        driver.findElement(By.xpath(HomePageXpath.CATALOG_XPATH)).click();
+        return this;
+    }
 }
