@@ -104,12 +104,16 @@ public class HomePage {
         return driver;
     }
 
-    public String getTextPersonalDataProcessingPolicy(){
+    public String getTextPersonalDataProcessingPolicy() {
         return getDriver().findElement(By.xpath(HomePageXpath.FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH)).getText();
     }
 
     public HomePage clickLinkUserSupport() {
         driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).click();
         return this;
+    }
+
+    public String getTextSupportUser() {
+        return getDriver().findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).getText();
     }
 }
