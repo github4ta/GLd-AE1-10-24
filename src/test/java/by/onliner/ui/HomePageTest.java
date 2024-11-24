@@ -88,4 +88,15 @@ public class HomePageTest extends BaseTest {
         String expectedResult = "Поддержка пользователей";
         Assertions.assertEquals(expectedResult, homePage.getTextSupportUser());
     }
+
+    @Test
+    @DisplayName("Тест для проверки, что ссылка Барахолка основного меню открывает страницу Барахолка")
+    public void testCheckGoToBaraholka() {
+        HomePage homePage = new HomePage();
+
+        String expectedResult = "https://baraholka.onliner.by/";
+        homePage.clickLinkBaraholca();
+        Assertions.assertEquals(expectedResult, homePage.getCurrentUrl());
+    }
+
 }
