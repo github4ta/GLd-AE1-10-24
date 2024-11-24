@@ -87,9 +87,11 @@ public class HomePageTest extends BaseTest {
     @DisplayName("Открытие вкладки 'Дома и квартиры'")
     public void testOpenHousesAndFlatsPage() {
         HomePage homePage = new HomePage();
+        HousesAndFlatsPage housesAndFlatsPage = new HousesAndFlatsPage();
+
         homePage.clickHousesAndFlatsLink();
         final List<String> expectedTabNames = List.of("Продажа", "Аренда");
-        final List<String> actualTabNames = new HousesAndFlatsPage().getTabNames();
+        final List<String> actualTabNames = housesAndFlatsPage.getTabNames();
 
         Assertions.assertEquals(expectedTabNames,actualTabNames, "Неккоректные названия вкладок" );
     }
