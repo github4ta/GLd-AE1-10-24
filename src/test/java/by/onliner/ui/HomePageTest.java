@@ -20,10 +20,10 @@ public class HomePageTest extends BaseTest {
 
     @Test
     @DisplayName("Текст Политика обработки персональных данных отоборажается в футере")
-    public void testDisplayTextPersonalDataProcessingPolicy(){
+    public void testDisplayTextPersonalDataProcessingPolicy() {
         HomePage homePage = new HomePage();
         String expectedText = "Политика обработки персональных данных";
-        String actualText= homePage.getTextPersonalDataProcessingPolicy();
+        String actualText = homePage.getTextPersonalDataProcessingPolicy();
         Assertions.assertEquals(expectedText, actualText, "Неверный текст ссылки");
     }
 
@@ -62,10 +62,10 @@ public class HomePageTest extends BaseTest {
 
         Assertions.assertEquals(expectedResult, actualResult, "Неверный текст ссылки");
     }
-  
+
     @Test
     @DisplayName("Текст ссылки 'Тарифы' отображается в футере")
-        public void testDisplayTariffsLink() {
+    public void testDisplayTariffsLink() {
         HomePage homePage = new HomePage();
         String expectedResultTariffs = "Тарифы";
         Assertions.assertEquals(expectedResultTariffs, homePage.getTariffsFooterLinkText(), "Неверный текст ссылки");
@@ -81,32 +81,34 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Проверка открытия страницы Форум")
-    public void testOpenPageForum() {
+    @DisplayName("Проверка на корректный переход по ссылке VK")
+    public void testVkLink() {
         HomePage homePage = new HomePage();
-        homePage.clickLinkForum();
-        String expectedText = "Форум";
-
-        Assertions.assertEquals(expectedText, homePage.getTextForum(), "Неверная страница открыта");
+        String expectedLink = "https://vk.com/onliner";
+        Assertions.assertEquals(expectedLink, homePage.clickVkLink().getActualLink());
     }
 
     @Test
-    @DisplayName("Текст ссылки 'Поддержка пользователей' отображается в футере")
-    public void testDisplaySupportUser() {
+    @DisplayName("Проверка на корректный переход по ссылке FaceBook")
+    public void testFaceBookLink() {
         HomePage homePage = new HomePage();
-
-        String expectedResult = "Поддержка пользователей";
-        Assertions.assertEquals(expectedResult, homePage.getTextSupportUser());
+        String expectedLink = "https://www.facebook.com/onlinerby";
+        Assertions.assertEquals(expectedLink, homePage.clickFaceBookLink().getActualLink());
     }
 
     @Test
-    @DisplayName("Тест для проверки, что ссылка Барахолка основного меню открывает страницу Барахолка")
-    public void testCheckGoToBaraholka() {
+    @DisplayName("Проверка на корректный переход по ссылке X")
+    public void testXLink() {
         HomePage homePage = new HomePage();
-
-        String expectedResult = "https://baraholka.onliner.by/";
-        homePage.clickLinkBaraholca();
-        Assertions.assertEquals(expectedResult, homePage.getCurrentUrl());
+        String expectedLink = "https://x.com/OnlinerBY";
+        Assertions.assertEquals(expectedLink, homePage.clickTwitterLink().getActualLink());
     }
 
+    @Test
+    @DisplayName("Проверка на корректный переход по ссылке YouTube")
+    public void testYouTubeLink() {
+        HomePage homePage = new HomePage();
+        String expectedLink = "https://www.youtube.com/onlinerby";
+        Assertions.assertEquals(expectedLink, homePage.clickYouTubeLink().getActualLink());
+    }
 }

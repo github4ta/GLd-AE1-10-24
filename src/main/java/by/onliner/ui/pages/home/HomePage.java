@@ -1,8 +1,13 @@
 package by.onliner.ui.pages.home;
 
 import by.onliner.ui.driver.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import by.onliner.ui.utils.socialMediaMethods.SocialMediaUrl;
+import org.apache.commons.exec.ExecuteException;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HomePage {
 
@@ -111,6 +116,66 @@ public class HomePage {
     public HomePage clickLinkUserSupport() {
         driver.findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).click();
         return this;
+    }
+
+    public SocialMediaUrl clickVkLink() {
+        driver.findElement(By.xpath(HomePageXpath.COOKIE_SUBMIT_BUTTON_XPATH)).click();
+        int maxRetry = 2;
+        for (int i = 0; i < maxRetry; i++) {
+            try {
+                WebElement element = driver.findElement(By.xpath(HomePageXpath.VK_BUTTON_XPATH));
+                element.click();
+                break;
+            } catch (StaleElementReferenceException e) {
+                if (i == maxRetry - 1) throw e;
+            }
+        }
+        return new SocialMediaUrl(Driver.getDriver());
+    }
+
+    public SocialMediaUrl clickFaceBookLink() {
+        driver.findElement(By.xpath(HomePageXpath.COOKIE_SUBMIT_BUTTON_XPATH)).click();
+        int maxRetry = 2;
+        for (int i = 0; i < maxRetry; i++) {
+            try {
+                WebElement element = driver.findElement(By.xpath(HomePageXpath.FACEBOOK_BUTTON_XPATH));
+                element.click();
+                break;
+            } catch (StaleElementReferenceException e) {
+                if (i == maxRetry - 1) throw e;
+            }
+        }
+        return new SocialMediaUrl(getDriver());
+    }
+
+    public SocialMediaUrl clickTwitterLink() {
+        driver.findElement(By.xpath(HomePageXpath.COOKIE_SUBMIT_BUTTON_XPATH)).click();
+        int maxRetry = 2;
+        for (int i = 0; i < maxRetry; i++) {
+            try {
+                WebElement element = driver.findElement(By.xpath(HomePageXpath.TWITTER_BUTTON_XPATH));
+                element.click();
+                break;
+            } catch (StaleElementReferenceException e) {
+                if (i == maxRetry - 1) throw e;
+            }
+        }
+        return new SocialMediaUrl(getDriver());
+    }
+
+    public SocialMediaUrl clickYouTubeLink() {
+        driver.findElement(By.xpath(HomePageXpath.COOKIE_SUBMIT_BUTTON_XPATH)).click();
+        int maxRetry = 2;
+        for (int i = 0; i < maxRetry; i++) {
+            try {
+                WebElement element = driver.findElement(By.xpath(HomePageXpath.YOUTUBE_BUTTON_XPATH));
+                element.click();
+                break;
+            } catch (StaleElementReferenceException e) {
+                if (i == maxRetry - 1) throw e;
+            }
+        }
+        return new SocialMediaUrl(getDriver());
     }
 
     public HomePage clickLinkForum() {
