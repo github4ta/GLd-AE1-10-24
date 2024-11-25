@@ -23,4 +23,8 @@ public class RegistrationPage {
     public String getRepeatPasswordInputValue() {
         return driver.findElement(By.xpath(RegistrationPageXpath.INPUT_REPEAT_PASSWORD_XPATH)).getAttribute("value");
     }
+
+    public void clickAcceptProcessingPersonalDataCheckbox() {
+        driver.findElement(By.xpath(RegistrationPageXpath.ACCEPT_PROCESSING_PERSONAL_DATA_CHECKBOX_XPATH)).click();
+    }
 }
