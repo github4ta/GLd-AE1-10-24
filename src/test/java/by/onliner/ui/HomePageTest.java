@@ -4,10 +4,6 @@ import by.onliner.ui.pages.home.HomePage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-
-import java.sql.SQLOutput;
-import java.util.Set;
 
 public class HomePageTest extends BaseTest {
 
