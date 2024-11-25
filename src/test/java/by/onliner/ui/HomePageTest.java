@@ -89,4 +89,13 @@ public class HomePageTest extends BaseTest {
 
         Assertions.assertEquals(expectedText, homePage.getTextForum(), "Неверная страница открыта");
     }
+
+    @Test
+    @DisplayName("Текст ссылки 'Поддержка пользователей' отображается в футере")
+    public void testDisplaySupportUser() {
+        HomePage homePage = new HomePage();
+
+        String expectedResult = "Поддержка пользователей";
+        Assertions.assertEquals(expectedResult, homePage.getTextSupportUser());
+    }
 }
