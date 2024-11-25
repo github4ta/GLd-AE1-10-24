@@ -20,10 +20,10 @@ public class HomePageTest extends BaseTest {
 
     @Test
     @DisplayName("Текст Политика обработки персональных данных отоборажается в футере")
-    public void testDisplayTextPersonalDataProcessingPolicy() {
+    public void testDisplayTextPersonalDataProcessingPolicy(){
         HomePage homePage = new HomePage();
         String expectedText = "Политика обработки персональных данных";
-        String actualText = homePage.getTextPersonalDataProcessingPolicy();
+        String actualText= homePage.getTextPersonalDataProcessingPolicy();
         Assertions.assertEquals(expectedText, actualText, "Неверный текст ссылки");
     }
 
@@ -62,10 +62,10 @@ public class HomePageTest extends BaseTest {
 
         Assertions.assertEquals(expectedResult, actualResult, "Неверный текст ссылки");
     }
-
+  
     @Test
     @DisplayName("Текст ссылки 'Тарифы' отображается в футере")
-    public void testDisplayTariffsLink() {
+        public void testDisplayTariffsLink() {
         HomePage homePage = new HomePage();
         String expectedResultTariffs = "Тарифы";
         Assertions.assertEquals(expectedResultTariffs, homePage.getTariffsFooterLinkText(), "Неверный текст ссылки");
@@ -78,6 +78,16 @@ public class HomePageTest extends BaseTest {
 
         String expectedResult = "Публичные договоры";
         Assertions.assertEquals(expectedResult, homePage.getTextPublicContracts());
+    }
+
+    @Test
+    @DisplayName("Проверка открытия страницы Форум")
+    public void testOpenPageForum() {
+        HomePage homePage = new HomePage();
+        homePage.clickLinkForum();
+        String expectedText = "Форум";
+
+        Assertions.assertEquals(expectedText, homePage.getTextForum(), "Неверная страница открыта");
     }
 
     @Test
