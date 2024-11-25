@@ -1,4 +1,4 @@
-package by.onliner.ui.utils.socialMediaMethods;
+package by.onliner.ui.utils.randomNicknameMethods;
 
 public class RandomNicknameSymbols {
     public static char getRandomChar() {

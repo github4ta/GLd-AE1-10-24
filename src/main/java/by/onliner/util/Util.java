@@ -1,6 +1,6 @@
 package by.onliner.util;
 
-import by.onliner.ui.utils.socialMediaMethods.RandomNicknameSymbols;
+import by.onliner.ui.utils.randomNicknameMethods.RandomNicknameSymbols;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class Util {
