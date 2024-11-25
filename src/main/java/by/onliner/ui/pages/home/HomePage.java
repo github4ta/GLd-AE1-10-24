@@ -109,7 +109,7 @@ public class HomePage {
         return driver;
     }
 
-    public String getTextPersonalDataProcessingPolicy() {
+    public String getTextPersonalDataProcessingPolicy(){
         return getDriver().findElement(By.xpath(HomePageXpath.FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH)).getText();
     }
 
@@ -177,4 +177,33 @@ public class HomePage {
         }
         return new SocialMediaUrl(getDriver());
     }
+
+    public HomePage clickLinkForum() {
+        driver.findElement(By.xpath(HomePageXpath.FORUM_XPATH)).click();
+        return this;
+    }
+
+    public String getTextForum(){
+        return driver.findElement(By.xpath(HomePageXpath.FORUM_TEXT_XPATH)).getText();
+    }
+
+
+    public String getTextSupportUser() {
+        return getDriver().findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).getText();
+    }
+
+    public HomePage clickLinkCatalog() {
+        driver.findElement(By.xpath(HomePageXpath.CATALOG_XPATH)).click();
+        return this;
+    }
+
+    public HomePage clickLinkBaraholca() {
+        driver.findElement(By.xpath(HomePageXpath.BARAKHOLKA_XPATH)).click();
+        return this;
+    }
+
+    public String getCurrentUrl() {
+        return  driver.getCurrentUrl();
+    }
+
 }
