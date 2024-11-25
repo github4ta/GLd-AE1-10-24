@@ -13,7 +13,8 @@ public class RecoverPasswordPage {
         this.driver = driver;
     }
 
-    public void clickButtonNext() {
+    public RecoverPasswordPage clickButtonNext() {
         driver.findElement(By.xpath(RecoverPasswordPageXpath.AUTH_FORM_SUBMIT_BUTTON_XPATH)).click();
+        return this;
     }
 }
