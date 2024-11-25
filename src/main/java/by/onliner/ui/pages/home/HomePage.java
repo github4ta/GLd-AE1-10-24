@@ -131,4 +131,14 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageXpath.CATALOG_XPATH)).click();
         return this;
     }
+
+    public HomePage clickLinkBaraholca() {
+        driver.findElement(By.xpath(HomePageXpath.BARAKHOLKA_XPATH)).click();
+        return this;
+    }
+
+    public String getCurrentUrl() {
+        return  driver.getCurrentUrl();
+    }
+
 }
