@@ -23,7 +23,6 @@ public class RandomNicknameSymbols {
         int max = 123;
         int letter = min + (int) (Math.random() * (max - min));
         return (char) letter;
-
     }
 
     private static char getRandomNumber() {
