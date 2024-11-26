@@ -1,10 +1,8 @@
 package by.onliner.ui.pages.recover;
 
 import by.onliner.ui.driver.Driver;
-import by.onliner.ui.pages.login.LoginPageXpath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class RecoverPasswordPage {
 
@@ -20,8 +18,7 @@ public class RecoverPasswordPage {
         return this;
     }
 
-    public RecoverPasswordPage clickButtonNext() {
+    public void clickButtonNext() {
         driver.findElement(By.xpath(RecoverPasswordPageXpath.AUTH_FORM_SUBMIT_BUTTON_XPATH)).click();
-        return this;
     }
 }
