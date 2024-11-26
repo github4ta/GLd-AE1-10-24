@@ -118,6 +118,10 @@ public class HomePage {
         return this;
     }
 
+    public void clickHousesAndFlatsLink() {
+        driver.findElement(By.xpath(HomePageXpath.HOUSES_AND_FLATS_XPATH)).click();
+    }
+
     public SocialMediaUrl clickVkLink() {
         driver.findElement(By.xpath(HomePageXpath.COOKIE_SUBMIT_BUTTON_XPATH)).click();
         int maxRetry = 2;
@@ -205,5 +209,4 @@ public class HomePage {
     public String getCurrentUrl() {
         return  driver.getCurrentUrl();
     }
-
 }

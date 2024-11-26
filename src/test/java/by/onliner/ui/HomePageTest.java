@@ -1,9 +1,12 @@
 package by.onliner.ui;
 
 import by.onliner.ui.pages.home.HomePage;
+import by.onliner.ui.pages.home.HousesAndFlatsPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 public class HomePageTest extends BaseTest {
 
@@ -81,6 +84,18 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test
+    @DisplayName("Открытие вкладки 'Дома и квартиры'")
+    public void testOpenHousesAndFlatsPage() {
+        HomePage homePage = new HomePage();
+        HousesAndFlatsPage housesAndFlatsPage = new HousesAndFlatsPage();
+
+        homePage.clickHousesAndFlatsLink();
+        final List<String> expectedTabNames = List.of("Продажа", "Аренда");
+        final List<String> actualTabNames = housesAndFlatsPage.getTabNames();
+
+        Assertions.assertEquals(expectedTabNames,actualTabNames, "Неккоректные названия вкладок" );
+
+    @Test 
     @DisplayName("Проверка на корректный переход по ссылке VK")
     public void testVkLink() {
         HomePage homePage = new HomePage();
