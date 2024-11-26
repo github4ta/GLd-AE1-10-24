@@ -14,4 +14,7 @@ public class LoginPageXpath {
     public static final String LINK_REGISTRATION_XPATH = "//*[@class='auth-form']//*[@href='https://profile.onliner.by/registration']";
     public static final String LINK_RECOVER_PASSWORD_XPATH = "//*[@class='auth-form']//*[@href='https://profile.onliner.by/recover-password']";
     public static final String TEXT_FOOTER_XPATH = "//*[@class='auth-form__footer']//*[@class='auth-form__description']";
+    public static final String BUTTON_OPEN_LOGIN_FORM_XPATH = "//*[@id='userbar']//*[text()='Вход']";
+    public static final String ERROR_MESSAGE_USERNAME = "//div[@class='auth-form']//form//div[contains(@class, 'auth-form__description_error') and contains(text(), 'ник')]";
+    public static final String ERROR_MESSAGE_PASSWORD = "//div[@class='auth-form']//form//div[contains(@class, 'auth-form__description_error') and contains(text(), 'пароль')]";
 }
