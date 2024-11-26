@@ -1,9 +1,12 @@
 package by.onliner.ui;
 
 import by.onliner.ui.pages.home.HomePage;
+import by.onliner.ui.pages.home.HousesAndFlatsPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 public class HomePageTest extends BaseTest {
 
@@ -20,10 +23,10 @@ public class HomePageTest extends BaseTest {
 
     @Test
     @DisplayName("Текст Политика обработки персональных данных отоборажается в футере")
-    public void testDisplayTextPersonalDataProcessingPolicy(){
+    public void testDisplayTextPersonalDataProcessingPolicy() {
         HomePage homePage = new HomePage();
         String expectedText = "Политика обработки персональных данных";
-        String actualText= homePage.getTextPersonalDataProcessingPolicy();
+        String actualText = homePage.getTextPersonalDataProcessingPolicy();
         Assertions.assertEquals(expectedText, actualText, "Неверный текст ссылки");
     }
 
@@ -62,10 +65,10 @@ public class HomePageTest extends BaseTest {
 
         Assertions.assertEquals(expectedResult, actualResult, "Неверный текст ссылки");
     }
-  
+
     @Test
     @DisplayName("Текст ссылки 'Тарифы' отображается в футере")
-        public void testDisplayTariffsLink() {
+    public void testDisplayTariffsLink() {
         HomePage homePage = new HomePage();
         String expectedResultTariffs = "Тарифы";
         Assertions.assertEquals(expectedResultTariffs, homePage.getTariffsFooterLinkText(), "Неверный текст ссылки");
@@ -81,32 +84,46 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test
-    @DisplayName("Проверка открытия страницы Форум")
-    public void testOpenPageForum() {
+    @DisplayName("Открытие вкладки 'Дома и квартиры'")
+    public void testOpenHousesAndFlatsPage() {
         HomePage homePage = new HomePage();
-        homePage.clickLinkForum();
-        String expectedText = "Форум";
+        HousesAndFlatsPage housesAndFlatsPage = new HousesAndFlatsPage();
 
-        Assertions.assertEquals(expectedText, homePage.getTextForum(), "Неверная страница открыта");
+        homePage.clickHousesAndFlatsLink();
+        final List<String> expectedTabNames = List.of("Продажа", "Аренда");
+        final List<String> actualTabNames = housesAndFlatsPage.getTabNames();
+
+        Assertions.assertEquals(expectedTabNames,actualTabNames, "Неккоректные названия вкладок" );
+
+    @Test 
+    @DisplayName("Проверка на корректный переход по ссылке VK")
+    public void testVkLink() {
+        HomePage homePage = new HomePage();
+        String expectedLink = "https://vk.com/onliner";
+        Assertions.assertEquals(expectedLink, homePage.clickVkLink().getActualLink());
     }
 
     @Test
-    @DisplayName("Текст ссылки 'Поддержка пользователей' отображается в футере")
-    public void testDisplaySupportUser() {
+    @DisplayName("Проверка на корректный переход по ссылке FaceBook")
+    public void testFaceBookLink() {
         HomePage homePage = new HomePage();
-
-        String expectedResult = "Поддержка пользователей";
-        Assertions.assertEquals(expectedResult, homePage.getTextSupportUser());
+        String expectedLink = "https://www.facebook.com/onlinerby";
+        Assertions.assertEquals(expectedLink, homePage.clickFaceBookLink().getActualLink());
     }
 
     @Test
-    @DisplayName("Тест для проверки, что ссылка Барахолка основного меню открывает страницу Барахолка")
-    public void testCheckGoToBaraholka() {
+    @DisplayName("Проверка на корректный переход по ссылке X")
+    public void testXLink() {
         HomePage homePage = new HomePage();
-
-        String expectedResult = "https://baraholka.onliner.by/";
-        homePage.clickLinkBaraholca();
-        Assertions.assertEquals(expectedResult, homePage.getCurrentUrl());
+        String expectedLink = "https://x.com/OnlinerBY";
+        Assertions.assertEquals(expectedLink, homePage.clickTwitterLink().getActualLink());
     }
 
+    @Test
+    @DisplayName("Проверка на корректный переход по ссылке YouTube")
+    public void testYouTubeLink() {
+        HomePage homePage = new HomePage();
+        String expectedLink = "https://www.youtube.com/onlinerby";
+        Assertions.assertEquals(expectedLink, homePage.clickYouTubeLink().getActualLink());
+    }
 }

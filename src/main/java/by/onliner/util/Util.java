@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 public class Util {
 
     public static String generateEmail() {
@@ -27,5 +29,9 @@ public class Util {
         String domain = domains.get(random.nextInt(domains.size()));
 
         return name + "@" + domain;
+    }
+
+    public static String generatePassword(){
+        return RandomStringUtils.randomAscii(9,13);
     }
 }
