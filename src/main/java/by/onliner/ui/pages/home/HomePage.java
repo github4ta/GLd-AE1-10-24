@@ -1,13 +1,17 @@
 package by.onliner.ui.pages.home;
 
 import by.onliner.ui.driver.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import by.onliner.ui.utils.socialMediaMethods.SocialMediaUrl;
 import org.apache.commons.exec.ExecuteException;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
+
 
 public class HomePage {
 
@@ -70,10 +74,6 @@ public class HomePage {
         return this;
     }
 
-    public void clickManifestLink() {
-        driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH)).click();
-    }
-
     public AdvertisingPage clickLinkAdvertising() {
         driver.findElement(By.xpath(HomePageXpath.ADVERTISING_LINK_XPATH)).click();
         return new AdvertisingPage(this.driver);
@@ -109,7 +109,7 @@ public class HomePage {
         return driver;
     }
 
-    public String getTextPersonalDataProcessingPolicy(){
+    public String getTextPersonalDataProcessingPolicy() {
         return getDriver().findElement(By.xpath(HomePageXpath.FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH)).getText();
     }
 
@@ -118,6 +118,14 @@ public class HomePage {
         return this;
     }
 
+    public ManifestPage clickManifestLink() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement element = driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH));
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        element.click();
+        return new ManifestPage(this.driver);
+    }
+  
     public void clickHousesAndFlatsLink() {
         driver.findElement(By.xpath(HomePageXpath.HOUSES_AND_FLATS_XPATH)).click();
     }
