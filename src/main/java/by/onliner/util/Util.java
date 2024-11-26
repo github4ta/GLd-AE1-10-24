@@ -1,6 +1,7 @@
 package by.onliner.util;
 
 import by.onliner.ui.utils.randomNicknameMethods.RandomNicknameSymbols;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -8,8 +9,6 @@ import java.util.Random;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class Util {
-    public static String generatePassword() {
-        return RandomStringUtils.randomAscii(9, 13);
 
     public static String generateEmail() {
         Random random = new Random();
@@ -34,8 +33,8 @@ public class Util {
         return name + "@" + domain;
     }
 
-    public static String generatePassword(){
-        return RandomStringUtils.randomAscii(9,13);
+    public static String generatePassword() {
+        return RandomStringUtils.randomAscii(9, 13);
     }
 
     public static String generateNick() {
