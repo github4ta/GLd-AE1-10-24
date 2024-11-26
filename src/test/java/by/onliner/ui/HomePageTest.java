@@ -93,9 +93,10 @@ public class HomePageTest extends BaseTest {
         final List<String> expectedTabNames = List.of("Продажа", "Аренда");
         final List<String> actualTabNames = housesAndFlatsPage.getTabNames();
 
-        Assertions.assertEquals(expectedTabNames,actualTabNames, "Неккоректные названия вкладок" );
+        Assertions.assertEquals(expectedTabNames, actualTabNames, "Неккоректные названия вкладок");
+    }
 
-    @Test 
+    @Test
     @DisplayName("Проверка на корректный переход по ссылке VK")
     public void testVkLink() {
         HomePage homePage = new HomePage();
