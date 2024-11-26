@@ -19,19 +19,21 @@ public class LoginPage {
         buttonOpenLoginFormWebElement.click();
     }
 
-    public void sendKeysUsername(String login) {
+    public LoginPage fillUsername(String login) {
         By inputUsernameBy = By.xpath(LoginPageXpath.INPUT_NAME_XPATH);
         WebElement inputUsernameWebElement = this.driver.findElement(inputUsernameBy);
         inputUsernameWebElement.sendKeys(login);
+        return this;
     }
 
-    public void sendKeysPassword(String password) {
+    public LoginPage fillPassword(String password) {
         By inputPasswordBy = By.xpath(LoginPageXpath.INPUT_PASSWORD_XPATH);
         WebElement inputPasswordWebElement = this.driver.findElement(inputPasswordBy);
         inputPasswordWebElement.sendKeys(password);
+        return this;
     }
 
-    public void clickButtonLogin() {
+    public void clickLoginButton() {
         By buttonLoginBy = By.xpath(LoginPageXpath.BUTTON_LOGIN_XPATH);
         WebElement buttonLoginWebElement = this.driver.findElement(buttonLoginBy);
         buttonLoginWebElement.click();
