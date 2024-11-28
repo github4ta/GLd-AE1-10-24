@@ -118,6 +118,15 @@ public class HomePage {
         return this;
     }
 
+
+    public HomePage clickLinkServices() {
+        driver.findElement(By.xpath(HomePageXpath.SERVICES_XPATH)).click();
+        return this;
+    }
+
+    public String getTextServices(){
+        return driver.findElement(By.xpath(HomePageXpath.SERVICES_TEXT_XPATH)).getText();
+
     public ManifestPage clickManifestLink() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement element = driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH));

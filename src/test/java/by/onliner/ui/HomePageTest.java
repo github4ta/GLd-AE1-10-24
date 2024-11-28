@@ -1,6 +1,7 @@
 package by.onliner.ui;
 
 import by.onliner.ui.pages.home.HomePage;
+import by.onliner.ui.pages.home.HomePageMessage;
 import by.onliner.ui.pages.home.HousesAndFlatsPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -83,6 +84,15 @@ public class HomePageTest extends BaseTest {
         Assertions.assertEquals(expectedResult, homePage.getTextPublicContracts());
     }
 
+    @Test
+    @DisplayName("Проверка открытия страницы Услуги")
+    public void testOpenPageServices() {
+        HomePage homePage = new HomePage();
+        homePage.clickLinkServices();
+
+        Assertions.assertEquals(HomePageMessage.SERVICES_TITLE, homePage.getTextServices(), "Неверная страница открыта");
+    }
+  
     @Test
     @DisplayName("Открытие вкладки 'Дома и квартиры'")
     public void testOpenHousesAndFlatsPage() {
