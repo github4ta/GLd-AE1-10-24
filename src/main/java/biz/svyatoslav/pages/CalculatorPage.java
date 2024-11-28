@@ -34,4 +34,8 @@ public class CalculatorPage {
     public void fillHeight(String height) {
         driver.findElement(By.xpath(CalculatorXpath.INPUT_HEIGHT_XPATH)).sendKeys(height);
     }
+
+    public String getErrorMessage() {
+        return driver.findElement(By.xpath(CalculatorXpath.ERROR_MESSAGE_XPATH)).getText();
+    }
 }
