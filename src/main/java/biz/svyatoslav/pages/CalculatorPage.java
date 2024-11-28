@@ -3,10 +3,11 @@ package biz.svyatoslav.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Calculator {
+public class CalculatorPage {
     private WebDriver driver;
 
-    public Calculator() {
+    public CalculatorPage() {
+
     }
 
     public void clickButton() {
