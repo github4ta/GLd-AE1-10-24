@@ -2,7 +2,16 @@ package by.onliner.ui.pages.home;
 
 import by.onliner.ui.driver.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import by.onliner.ui.utils.socialMediaMethods.SocialMediaUrl;
+import org.apache.commons.exec.ExecuteException;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+
 
 public class HomePage {
 
@@ -65,10 +74,6 @@ public class HomePage {
         return this;
     }
 
-    public void clickManifestLink() {
-        driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH)).click();
-    }
-
     public AdvertisingPage clickLinkAdvertising() {
         driver.findElement(By.xpath(HomePageXpath.ADVERTISING_LINK_XPATH)).click();
         return new AdvertisingPage(this.driver);
@@ -104,7 +109,7 @@ public class HomePage {
         return driver;
     }
 
-    public String getTextPersonalDataProcessingPolicy(){
+    public String getTextPersonalDataProcessingPolicy() {
         return getDriver().findElement(By.xpath(HomePageXpath.FOOTER_LINK_PERSONAL_DATA_PROCESSING_POLICY_XPATH)).getText();
     }
 
@@ -113,6 +118,7 @@ public class HomePage {
         return this;
     }
 
+
     public HomePage clickLinkServices() {
         driver.findElement(By.xpath(HomePageXpath.SERVICES_XPATH)).click();
         return this;
@@ -120,5 +126,104 @@ public class HomePage {
 
     public String getTextServices(){
         return driver.findElement(By.xpath(HomePageXpath.SERVICES_TEXT_XPATH)).getText();
+
+    public ManifestPage clickManifestLink() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement element = driver.findElement(By.xpath(HomePageXpath.MANIFEST_LINK_XPATH));
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        element.click();
+        return new ManifestPage(this.driver);
+    }
+  
+    public void clickHousesAndFlatsLink() {
+        driver.findElement(By.xpath(HomePageXpath.HOUSES_AND_FLATS_XPATH)).click();
+    }
+
+    public SocialMediaUrl clickVkLink() {
+        driver.findElement(By.xpath(HomePageXpath.COOKIE_SUBMIT_BUTTON_XPATH)).click();
+        int maxRetry = 2;
+        for (int i = 0; i < maxRetry; i++) {
+            try {
+                WebElement element = driver.findElement(By.xpath(HomePageXpath.VK_BUTTON_XPATH));
+                element.click();
+                break;
+            } catch (StaleElementReferenceException e) {
+                if (i == maxRetry - 1) throw e;
+            }
+        }
+        return new SocialMediaUrl(Driver.getDriver());
+    }
+
+    public SocialMediaUrl clickFaceBookLink() {
+        driver.findElement(By.xpath(HomePageXpath.COOKIE_SUBMIT_BUTTON_XPATH)).click();
+        int maxRetry = 2;
+        for (int i = 0; i < maxRetry; i++) {
+            try {
+                WebElement element = driver.findElement(By.xpath(HomePageXpath.FACEBOOK_BUTTON_XPATH));
+                element.click();
+                break;
+            } catch (StaleElementReferenceException e) {
+                if (i == maxRetry - 1) throw e;
+            }
+        }
+        return new SocialMediaUrl(getDriver());
+    }
+
+    public SocialMediaUrl clickTwitterLink() {
+        driver.findElement(By.xpath(HomePageXpath.COOKIE_SUBMIT_BUTTON_XPATH)).click();
+        int maxRetry = 2;
+        for (int i = 0; i < maxRetry; i++) {
+            try {
+                WebElement element = driver.findElement(By.xpath(HomePageXpath.TWITTER_BUTTON_XPATH));
+                element.click();
+                break;
+            } catch (StaleElementReferenceException e) {
+                if (i == maxRetry - 1) throw e;
+            }
+        }
+        return new SocialMediaUrl(getDriver());
+    }
+
+    public SocialMediaUrl clickYouTubeLink() {
+        driver.findElement(By.xpath(HomePageXpath.COOKIE_SUBMIT_BUTTON_XPATH)).click();
+        int maxRetry = 2;
+        for (int i = 0; i < maxRetry; i++) {
+            try {
+                WebElement element = driver.findElement(By.xpath(HomePageXpath.YOUTUBE_BUTTON_XPATH));
+                element.click();
+                break;
+            } catch (StaleElementReferenceException e) {
+                if (i == maxRetry - 1) throw e;
+            }
+        }
+        return new SocialMediaUrl(getDriver());
+    }
+
+    public HomePage clickLinkForum() {
+        driver.findElement(By.xpath(HomePageXpath.FORUM_XPATH)).click();
+        return this;
+    }
+
+    public String getTextForum(){
+        return driver.findElement(By.xpath(HomePageXpath.FORUM_TEXT_XPATH)).getText();
+    }
+
+
+    public String getTextSupportUser() {
+        return getDriver().findElement(By.xpath(HomePageXpath.FOOTER_LINK_USER_SUPPORT_XPATH)).getText();
+    }
+
+    public HomePage clickLinkCatalog() {
+        driver.findElement(By.xpath(HomePageXpath.CATALOG_XPATH)).click();
+        return this;
+    }
+
+    public HomePage clickLinkBaraholca() {
+        driver.findElement(By.xpath(HomePageXpath.BARAKHOLKA_XPATH)).click();
+        return this;
+    }
+
+    public String getCurrentUrl() {
+        return  driver.getCurrentUrl();
     }
 }
