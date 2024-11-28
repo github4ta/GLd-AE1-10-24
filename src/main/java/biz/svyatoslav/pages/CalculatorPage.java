@@ -1,5 +1,6 @@
 package biz.svyatoslav.pages;
 
+import biz.svyatoslav.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -7,7 +8,7 @@ public class CalculatorPage {
     private WebDriver driver;
 
     public CalculatorPage() {
-
+        driver = Driver.getDriver();
     }
 
     public void clickButton() {
