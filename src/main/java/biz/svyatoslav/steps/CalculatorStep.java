@@ -19,4 +19,8 @@ public class CalculatorStep {
         calculatorPage.clickButton();
 
     }
+
+    public void fillFormAndSubmit(String name, int height, int weight, String gender) {
+        fillFormAndSubmit(name, String.valueOf(height), String.valueOf(weight), gender);
+    }
 }
