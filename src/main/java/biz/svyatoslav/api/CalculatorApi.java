@@ -1,5 +1,6 @@
 package biz.svyatoslav.api;
 
+import biz.svyatoslav.domain.NewUser;
 import biz.svyatoslav.domain.User;
 import io.restassured.response.ValidatableResponse;
 
@@ -27,5 +28,9 @@ public class CalculatorApi {
 
     public ValidatableResponse getResponseForRequestWithData(User user) {
         return getResponseForRequestWithData(user.getName(), user.getHeight(), user.getWeight(), user.getGender());
+    }
+
+    public ValidatableResponse getResponseForRequestWithData(NewUser user) {
+        return getResponseForRequestWithData(user.getName(), user.getHeight(), user.getWeight(), user.getGender().label);
     }
 }

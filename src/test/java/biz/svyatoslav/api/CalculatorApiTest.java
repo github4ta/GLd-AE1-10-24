@@ -1,6 +1,8 @@
 package biz.svyatoslav.api;
 
+import biz.svyatoslav.domain.NewUser;
 import biz.svyatoslav.domain.User;
+import biz.svyatoslav.enums.Gender;
 import io.restassured.response.ValidatableResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -21,6 +23,17 @@ public class CalculatorApiTest {
     public void testEmptyBody2() {
         String EMPTY_VLAUE = "";
         User user = new User(EMPTY_VLAUE, 0, 0, EMPTY_VLAUE);
+        CalculatorApi calculatorApi = new CalculatorApi();
+        ValidatableResponse response = calculatorApi.getResponseForRequestWithData(user);
+
+        response.statusCode(200);
+    }
+
+    @Test
+    @DisplayName("Не заданы параметры в body")
+    public void testEmptyBody3() {
+        String EMPTY_VLAUE = "";
+        NewUser user = new NewUser(EMPTY_VLAUE, 0, 0, Gender.FEMALE);
         CalculatorApi calculatorApi = new CalculatorApi();
         ValidatableResponse response = calculatorApi.getResponseForRequestWithData(user);
 
