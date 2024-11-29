@@ -3,6 +3,11 @@ package biz.svyatoslav.domain;
 import biz.svyatoslav.enums.Gender;
 
 public class Users {
+
+    public NewUser getUserWithValidData() {
+        return new NewUser("Name", 180, 80, Gender.MALE);
+    }
+
     public NewUser getZeroWeightUser(){
         NewUser newUser =  new NewUser("Benya", 180, 0, Gender.MALE);
         return newUser;
@@ -25,7 +30,8 @@ public class Users {
     public NewUser getUserDataWithHeight() {
         return new NewUser("", 180, 0, Gender.MALE);
     }
-    public NewUser getUserDataWithHeight() {
+
+    public NewUser getUserData() {
         return new NewUser("Eugene", 0, 0, Gender.MALE);
     }
 }
