@@ -16,4 +16,7 @@ public class Users {
         NewUser user = new NewUser("", 0, 80, Gender.MALE);
         return user;
     }
+    public NewUser getUserDataWithHeight() {
+        return new NewUser("", 180, 0, Gender.MALE);
+    }
 }
