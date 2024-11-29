@@ -1,6 +1,8 @@
 package biz.svyatoslav.steps;
 
+import biz.svyatoslav.domain.NewUser;
 import biz.svyatoslav.domain.User;
+import biz.svyatoslav.enums.Gender;
 import biz.svyatoslav.pages.CalculatorPage;
 
 public class CalculatorStep {
@@ -11,10 +13,10 @@ public class CalculatorStep {
         calculatorPage.fillName(name);
         calculatorPage.fillHeight(height);
         calculatorPage.fillWeight(weight);
-        if (gender == "male") {
+        if (gender == "MALE") {
             calculatorPage.selectMale();
         }
-        if (gender == "female") {
+        if (gender == "FEMALE") {
             calculatorPage.selectFemale();
         }
         calculatorPage.clickButton();
@@ -26,5 +28,24 @@ public class CalculatorStep {
 
     public void fillFormAndSubmit(User user) {
         fillFormAndSubmit(user.getName(), user.getHeight(), user.getWeight(), user.getGender());
+    }
+
+    public void fillFormAndSubmit(NewUser user) {
+        fillFormAndSubmit(user.getName(), user.getHeight(), user.getWeight(), user.getGender().toString());
+    }
+
+    public void fillFormAndSubmit(String name, String height, String weight, Gender gender) {
+        CalculatorPage calculatorPage = new CalculatorPage();
+
+        calculatorPage.fillName(name);
+        calculatorPage.fillHeight(height);
+        calculatorPage.fillWeight(weight);
+        if (gender == Gender.MALE) {
+            calculatorPage.selectMale();
+        }
+        if (gender == Gender.FEMALE) {
+            calculatorPage.selectFemale();
+        }
+        calculatorPage.clickButton();
     }
 }
