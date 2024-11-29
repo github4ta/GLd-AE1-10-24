@@ -31,8 +31,16 @@ public class CalculatorPage {
         driver.findElement(By.xpath(CalculatorXpath.INPUT_WEIGHT_XPATH)).sendKeys(weight);
     }
 
+    public void fillWeight(int weight) {
+        fillWeight(String.valueOf(weight));
+    }
+
     public void fillHeight(String height) {
         driver.findElement(By.xpath(CalculatorXpath.INPUT_HEIGHT_XPATH)).sendKeys(height);
+    }
+
+    public void fillHeight(int height) {
+        fillHeight(Integer.toString(height));
     }
 
     public String getErrorMessage() {
