@@ -1,5 +1,6 @@
 package biz.svyatoslav.steps;
 
+import biz.svyatoslav.domain.User;
 import biz.svyatoslav.pages.CalculatorPage;
 
 public class CalculatorStep {
@@ -17,10 +18,13 @@ public class CalculatorStep {
             calculatorPage.selectFemale();
         }
         calculatorPage.clickButton();
-
     }
 
     public void fillFormAndSubmit(String name, int height, int weight, String gender) {
         fillFormAndSubmit(name, String.valueOf(height), String.valueOf(weight), gender);
+    }
+
+    public void fillFormAndSubmit(User user) {
+        fillFormAndSubmit(user.getName(), user.getHeight(), user.getWeight(), user.getGender());
     }
 }
