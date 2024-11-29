@@ -7,6 +7,7 @@ public class Users {
         NewUser newUser =  new NewUser("Benya", 180, 0, Gender.MALE);
         return newUser;
     }
+
     public NewUser getUserWithNoData() {
        NewUser newUser = new NewUser("", 0, 0, Gender.MALE);
        return newUser;
@@ -20,6 +21,7 @@ public class Users {
         NewUser user = new NewUser("", 0, 80, Gender.MALE);
         return user;
     }
+
     public NewUser getUserDataWithHeight() {
         return new NewUser("", 180, 0, Gender.MALE);
     }
