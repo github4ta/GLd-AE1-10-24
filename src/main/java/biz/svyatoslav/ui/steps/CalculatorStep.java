@@ -1,9 +1,9 @@
-package biz.svyatoslav.steps;
+package biz.svyatoslav.ui.steps;
 
 import biz.svyatoslav.domain.NewUser;
 import biz.svyatoslav.domain.User;
 import biz.svyatoslav.enums.Gender;
-import biz.svyatoslav.pages.CalculatorPage;
+import biz.svyatoslav.ui.pages.CalculatorPage;
 
 public class CalculatorStep {
 

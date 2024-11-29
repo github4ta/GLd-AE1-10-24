@@ -1,10 +1,9 @@
-package biz.svyatoslav;
+package biz.svyatoslav.ui;
 
-import biz.svyatoslav.driver.Driver;
+import biz.svyatoslav.ui.driver.Driver;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
 

@@ -1,6 +1,6 @@
-package biz.svyatoslav.pages;
+package biz.svyatoslav.ui.pages;
 
-import biz.svyatoslav.driver.Driver;
+import biz.svyatoslav.ui.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

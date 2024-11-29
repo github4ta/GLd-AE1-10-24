@@ -1,4 +1,4 @@
-package biz.svyatoslav.pages;
+package biz.svyatoslav.ui.pages;
 
 public class CalculatorMessages {
 

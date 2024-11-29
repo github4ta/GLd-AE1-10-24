@@ -1,4 +1,4 @@
-package biz.svyatoslav.pages;
+package biz.svyatoslav.ui.pages;
 
 public class CalculatorXpath {
     public static final String INPUT_NAME_XPATH = "/html/body/table/tbody/tr[2]/td[2]/form/table/tbody/tr[2]/td[2]/input";

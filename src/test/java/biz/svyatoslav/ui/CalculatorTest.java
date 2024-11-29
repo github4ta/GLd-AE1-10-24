@@ -1,11 +1,11 @@
-package biz.svyatoslav;
+package biz.svyatoslav.ui;
 
 import biz.svyatoslav.domain.NewUser;
 import biz.svyatoslav.domain.User;
 import biz.svyatoslav.enums.Gender;
-import biz.svyatoslav.pages.CalculatorMessages;
-import biz.svyatoslav.pages.CalculatorPage;
-import biz.svyatoslav.steps.CalculatorStep;
+import biz.svyatoslav.ui.pages.CalculatorMessages;
+import biz.svyatoslav.ui.pages.CalculatorPage;
+import biz.svyatoslav.ui.steps.CalculatorStep;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
