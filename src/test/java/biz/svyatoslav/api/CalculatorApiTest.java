@@ -10,7 +10,7 @@ public class CalculatorApiTest {
     public void testEmptyBody() {
         String EMPTY_VLAUE = "";
         CalculatorApi calculatorApi = new CalculatorApi();
-        ValidatableResponse response = calculatorApi.getResponseForRequestWithData(EMPTY_VLAUE, EMPTY_VLAUE, EMPTY_VLAUE);
+        ValidatableResponse response = calculatorApi.getResponseForRequestWithData(EMPTY_VLAUE, EMPTY_VLAUE, EMPTY_VLAUE, EMPTY_VLAUE);
 
         response.statusCode(200);
     }
